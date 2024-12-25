@@ -1,0 +1,22 @@
+[package]
+name = "agentspl"
+version = "0.1.0"
+description = "SPL Token implementation with state compression"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "agentspl"
+
+[features]
+no-entrypoint = []
+no-idl = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.29.0"
+anchor-spl = "0.29.0"
+solana-program = "1.17.0"
+spl-token = { version = "4.0.0", features = ["no-entrypoint"] }
+spl-associated-token-account = "2.2.0"
